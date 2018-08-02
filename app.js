@@ -1,3 +1,18 @@
+// Ejercicio #1
+function addArrayProperty(obj, key, array) {
+  obj.key = array;
+  return obj;
+}
+
+module.exports = addArrayProperty;
+
+// Ejercicio #2
+const objectPropertiesCounter = obj => Object.keys(obj).length;
+
+objectPropertiesCounter({ name: "John", lastname: "Doe" });
+
+module.exports = objectPropertiesCounter;
+
 //Ejercico #3
 
 let obj = {
