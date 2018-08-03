@@ -64,3 +64,23 @@ function fromListToObject(array) {
 }
 
 module.exports = fromListToObject;
+
+// #Ejercicio 6
+
+function transformFirstAndLast(array) {
+  // your code here
+  
+  let firSec = ['Queen', 'Elizabeth', 'Of Hearts', 'Beyonce'];
+  
+  newObject = {};
+  
+  
+  for (var i = 0; i < array.length; i++){
+    newobject[array[0][i]] = array[i].pop();
+    
+    
+  }
+  return newObject;
+}
+
+module.exports = transformFirstAndLast;
