@@ -76,7 +76,7 @@ function transformFirstAndLast(array) {
   
   
   for (var i = 0; i < array.length; i++){
-    newobject[array[0][i]] = array[i].pop();
+    newobject[array[0][i]] + array[i].pop();
     
     
   }
