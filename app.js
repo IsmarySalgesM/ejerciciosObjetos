@@ -84,3 +84,80 @@ function transformFirstAndLast(array) {
 }
 
 module.exports = transformFirstAndLast;
+// Ejercico 7
+
+
+var name = 0;
+
+for(var i = 0; i < obj.length; i++){
+    name = obj[i].key;
+    for( var j = 0; j < name.length; j++){
+        
+  }
+    }
+      return obj.key[index];
+  }
+  
+module.exports = getElementOfArrayProperty;
+
+
+// ejercicio 8 
+
+function getAllKeys(obj) {
+  // your code here
+  
+  Object.keys(obj);
+}
+
+module.exports = getAllKeys;
+
+
+// Ejercico 9 
+
+function listAllValues(obj) {
+  // your code here
+  var arrNew = [];
+  var arrKey = Object.keys(obj);
+
+  for (let i = 0; i < arrKey.length; i ++) {
+    arrNew.push(obj[arrKey[i]]);
+  }
+
+  return arrNew;
+  
+  
+}
+// Ejercicio 10
+
+function transformEmployeeData(array) {
+  // your code here
+  
+  var arrayNew = [];
+    var objNew = {};
+    
+  for (let i = 0; i < array.length; i ++) {
+   arrayNew.push(array[i]);
+
+    for (let j = 0; j < arrayNew.length; j ++ ) {
+      objNew[arrayNew[j][0]] = arrayNew[j][1];
+    }
+
+  }
+
+  return objNew;
+
+  
+}
+
+// Ejercicio 11
+
+  // your code here
+ 
+  for( var i = 0; i < obj.length; i ++){
+    fullName = obj[i].split(" ");
+  }
+ return fullName;
+}
+
+
+
