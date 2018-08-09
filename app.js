@@ -42,12 +42,27 @@ removeStringValuesLongerThan(6, obj);
 
 //['name', 'age', 'hasPets']
 
-function getAllKeys(obj) {
-  object.keys(obj);
+function getElementOfArrayProperty(obj, key, index) {
+  // your code here
+
+if (obj.key === undefined){
+return undefined;
+  }
+  
+  if (!Array.isArray(obj.key)) {
+    return undefined; 
 }
 
-module.exports = getAllKeys;
+var name = 0;
 
+for(var i = 0; i < obj.length; i++){
+    name = obj[i].key;
+  
+    }
+      return obj.key[index];
+  
+}
+  
 //Ejercico #5
 
 function fromListToObject(array) {
@@ -105,11 +120,13 @@ module.exports = getElementOfArrayProperty;
 
 function getAllKeys(obj) {
   // your code here
+   var againArray = (Object.keys(obj));
   
-  Object.keys(obj);
+  return againArray;
 }
 
 module.exports = getAllKeys;
+
 
 
 // Ejercico 9 
@@ -129,25 +146,23 @@ function listAllValues(obj) {
 }
 // Ejercicio 10
 
-function transformEmployeeData(array) {
+function transformFirstAndLast(array) {
   // your code here
   
-  var arrayNew = [];
-    var objNew = {};
-    
-  for (let i = 0; i < array.length; i ++) {
-   arrayNew.push(array[i]);
-
-    for (let j = 0; j < arrayNew.length; j ++ ) {
-      objNew[arrayNew[j][0]] = arrayNew[j][1];
-    }
-
-  }
-
-  return objNew;
-
   
+  var newObject = {};
+  
+  
+
+    newObject[array[0]] = array[array.length -1];
+    
+    
+  
+  return newObject;
 }
+
+module.exports = transformFirstAndLast;
+
 
 // Ejercicio 11
 
@@ -159,5 +174,123 @@ function transformEmployeeData(array) {
  return fullName;
 }
 
+// Ejercico 12
 
+const customerData = {
+  Joe: {
+    visits: 1,
+  },
+  Carol: {
+    visits: 2,
+  },
+  Howard: {
+    visits: 3,
+  },
+  Carrie: {
+    visits: 4,
+  },
+};
+
+function greetCustomer(firstName) {
+  var  greeting = " ";
+  // your code here
+  
+  if (customerData[firstName] === undefined) {
+    greeting = "Welcome! Is this your first time?";
+  } else if (customerData[firstName].visits == 1) {
+    greeting ="Welcome back, " + firstName + "! We're glad you liked us the first time!";
+    } else if (customerData[firstName].visits > 1) {
+      greeting = "Welcome back, " + firstName + "! So glad to see you again!";
+      }
+    
+      
+    
+
+  return greeting;
+
+// Ejercico 13
+
+function transformEmployeeData(array) {
+  // your code here
+  
+  var arrayNew = [];
+ 
+    
+    
+  for (var i = 0; i < array.length; i ++) {
+     var objNew = {};
+    
+    for (var j = 0; j < array[i].length; j ++ ) {
+      objNew[array[i][j][0]] = array[i][j][1];
+    }
+    arrayNew.push(objNew);
+  }
+
+  return arrayNew;
+
+  
+ }
+
+ // Ejerccio 
+
+ function convertObjectToList(obj) {
+  // your code here
+  
+ var newArray = [];
+  
+ var valArr = Object.keys(obj);
+  
+  for( var i = 0; i < valArr.length; i ++){
+    newArray.push([valArr[i],obj[valArr[i]]]);
+  }
+   return newArray;
+}
+
+module.exports = convertObjectToList;
+
+// Ejercicio
+
+function getSumOfAllElementsAtProperty(obj, key) {
+
+  
+  var suma = 0;
+ 
+
+  if (!Array.isArray(obj[key])  || obj[key].length === 0 ) {
+    return 0;       
+  }
+  
+  for( var one in obj[key] ){
+    suma += obj[key][one];
+  }
+   return suma;
+}
+
+module.exports = getSumOfAllElementsAtProperty;
+
+
+// Ejercico 
+
+function addObjectProperty(obj1, key, obj2) {
+ 
+ 
+ obj1[key] = obj2;
+ 
+  return obj1[key];
+}
+
+module.exports = addObjectProperty;
+
+
+// Ejercicio
+
+function addFullNameProperty(obj) {
+  // your code here
+  
+ obj.fullName = obj.firstName + " " + obj.lastName;
+ return obj.fullName;
+}
+
+
+module.exports = addFullNameProperty;
 
